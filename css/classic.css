@@ -1,0 +1,127 @@
+* {
+    font-family: "Arial Black", serif;
+}
+
+:root {
+    --raisinBlack: #222021;
+    --arsenic: #424041;
+    --graniteGray: #696667;
+    --pastelGray: #D0C9C1;
+    --quickSilver: #A7A29B;
+    --philipphineGray: #908B85;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+body {
+    background-color: var(--raisinBlack);
+    margin: 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+header {
+    background-color: var(--arsenic);
+    color:  var(--philipphineGray);
+    letter-spacing: 1.618rem;
+}
+
+.header_container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.headline {
+    font-size: 500%;
+    margin: 0;
+
+    grid-column: 2;
+}
+
+.sub_headline {
+    font-size: 190%;
+
+    margin-top: 1.618rem;
+    grid-column: 2;
+}
+
+.social_icon {
+    color: var(--philipphineGray);
+    transition: color 0.4s;
+    text-decoration: none;
+    font-size: 300%;
+
+    grid-column: 1;
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+}
+
+.social_icon:hover {
+    color: var(--raisinBlack);
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+
+.container {
+    background-color: var(--raisinBlack);
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 20% 20%;
+    grid-row-gap: 5%;
+    margin-top: 5%;
+}
+
+.container img {
+    /*object-fit: cover;*/
+    /*width: 80vw;*/
+    /*height: 20vw;*/
+}
+
+.digital_bar {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.container a {
+    grid-column: 2;
+}
+
+.container p {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+    grid-column: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+    /*max-width: 100%;*/
+    color: var(--philipphineGray);
+    font-size: 200%;
+
+    justify-self: right;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+
+footer {
+    background-color: var(--arsenic);
+    color:  var(--philipphineGray);
+    font-size: 80%;
+    letter-spacing: 0.2rem;
+}
+
+footer p {
+    padding-left: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+footer .social_icon {
+    margin-left: 0;
+    font-size: 200%;
+}
+
