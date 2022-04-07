@@ -117,19 +117,11 @@ body {
     margin-right: -0.618em;
 }
 
-.visible_top {
-    display: inline-block;
-    line-height: 1em;
-    background: linear-gradient(to bottom, #FFFFFF 50%, transparent 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.clip_top {
+    clip-path: inset(50% 0 0 0);
 }
-.visible_bottom {
-    display: inline-block;
-    line-height: 1em;
-    background: linear-gradient(to top, #FFFFFF 50%, transparent 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.clip_bottom {
+    clip-path: inset(0 0 52% 0);
 }
 
 
@@ -179,8 +171,4 @@ body {
 
     z-index: 2;
 }
-
-
-
-
 
