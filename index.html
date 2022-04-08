@@ -24,12 +24,12 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
+                <div class="card_headline_bottom clip_top">
+                    <h1>Digital</h1>
+                </div>
                 <a href="digital.html">
                     <img src="images/benik_web.jpg" alt="Dog portrait">
                 </a>
-                <div class="card_headline_bottom clip_top">
-                    <p>Digital</p>
-                </div>
                 <div class="card_subheadline">
                     <p>Pet portraits</p>
                 </div>
@@ -47,18 +47,17 @@
                 </div>
             </div>
 
-<!--            <div class="swiper-slide">-->
-<!--                <div class="card_headline_bottom clip_top">-->
-<!--                    <p>Digital</p>-->
-<!--                </div>-->
-<!--                <a href="digital.html">-->
-<!--                    <img src="images/lower.jpg" alt="Lion poster">-->
-<!--                </a>-->
-<!--                <div class="card_subheadline">-->
-<!--                    <p>Posters</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
+            <div class="swiper-slide">
+                <div class="card_headline_bottom clip_top black_font">
+                    <p>Digital</p>
+                </div>
+                <a href="digital.html">
+                    <img src="images/spajdi.jpg" alt="Spider-man poster">
+                </a>
+                <div class="card_subheadline">
+                    <p>Posters</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -134,8 +133,10 @@
 <script>
     var swiper = new Swiper('.swiper', {
         // Optional parameters
+        slidesPerView: 1,
+        loopedSlides: 3,
         speed: 900,
-        // loop: true,
+        loop: true,
         effect: "cube",
         grabCursor: true,
         cubeEffect: {
@@ -147,7 +148,8 @@
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
-        },
+            waitForTransition: false,
+        }
     });
 </script>
 </body>
