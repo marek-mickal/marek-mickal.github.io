@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Digital by MM</title>
-    <link rel="stylesheet" href="css/digital.css"/>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/pages.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <body>
 <header>
-    <div class="top_menu f_base8">
-        <a href="#pp">Pet portraits</a>
+    <div class="top_menu">
+        <a href="#pp">Pet-portraits</a>
+        <a href="#poster">Posters</a>
+        <a href="#pp">Stickers</a>
     </div>
-    <h2 class="big_headline f_base24">Art by MM</h2>
-    <h2 class="name_headline f_base8">Marek Mičkal</h2>
+    <h2 class="big_headline">Art by MM</h2>
+    <h2 class="name_headline">Digital art</h2>
 </header>
 
 <main>
     <div class="container">
-        <div class="swiper">
+        <div class="swiper2">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="images/digital/benik_sq.jpg" alt="Pet portrait">
@@ -37,10 +40,29 @@
                 </div>
             </div>
         </div>
-        <div id="pp" class="card_headline">
-            <h2 class="f_base12">Pet portraits</h2>
+        <div id="pp" class="card_tag">
+            <h2 class="name_headline fix_position">Pet portraits</h2>
+        </div>
+
+
+        <div class="swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/digital/posters/leo.JPG" alt="Digital poster">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/posters/monada.JPG" alt="Digital poster">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/posters/spajdi.JPG" alt="Digital poster">
+                </div>
+            </div>
+        </div>
+        <div id="poster" class="card_tag">
+            <h2 class="name_headline fix_position">Posters</h2>
         </div>
     </div>
+
 </main>
 
 
@@ -53,7 +75,7 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper('.swiper', {
+    var swiper = new Swiper('.swiper2', {
         // Optional parameters
         slidesPerView: 2,
         // loopedSlides: 2,
