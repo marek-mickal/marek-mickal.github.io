@@ -1,10 +1,42 @@
+/*--------------------------- FONTS ---------------------------*/
+.f_base24 {
+    font-size: 24pt;
+    font-weight: 200;
+    letter-spacing: 0.618em;
+    margin-right: -0.618em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.f_base14 {
+    font-size: 14pt;
+    font-weight: 200;
+    letter-spacing: 0.618em;
+    margin-right: -0.618em;
+}
+
+.f_base8 {
+    font-size: 8pt;
+    font-weight: 300;
+    letter-spacing: 0.618em;
+    margin-right: -0.618em;
+}
+
+/*--------------------------- end ---------------------------*/
+
 body {
-    /*background-image: linear-gradient(to bottom, #111214, #0f0f11, #0c0c0e, #090909, #050505);*/
-    /*background-image: linear-gradient(to left top, #1c1c1e, #1d1d1f, #1e1e20, #1f1f21, #202022, #212123, #222223, #232324, #242425, #242425, #252526, #262627);*/
-    /*background-color: yellowgreen;*/
     background-image: linear-gradient(to top, #1b1c1d, #1c1d1e, #1c1d1f, #1d1e20, #1e1e21, #1f1f22, #202023, #212124, #222226, #232427, #252529, #26272a);
-    margin-right: 1em;
-    margin-left: 1em;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main, header {
+    margin: 0 16px;
+}
+header {
+    margin-top: 16px;
 }
 
 .container {
@@ -13,7 +45,9 @@ body {
 
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 1%;
+    grid-auto-rows: minmax(min-content, max-content);
 
+    margin: 0;
     padding: 0;
     border: 0;
 
@@ -21,27 +55,17 @@ body {
     color: whitesmoke;
 
     justify-content: center;
+    justify-items: center;
 }
 
 /*--------------------------- HEADER ---------------------------*/
 .big_headline {
-    font-size: 64pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-
     grid-column: 1 / span all;
     justify-self: center;
-
-    margin-top: 2rem;
-    margin-bottom: 0;
 }
 
 .name_headline {
-    font-size: 24.4pt;
-    font-weight: 300;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
+    font-size: 9pt;
 
     grid-column: 2 / span 2;
     justify-self: center;
@@ -52,20 +76,32 @@ body {
 }
 
 .top_menu {
-    font-size: 24pt;
-    font-weight: 200;
+    font-size: 9pt;
+
     letter-spacing: 0.3em;
     margin-right: -0.3em;
-    word-spacing: 1.8em;
+    word-spacing: 1em;
 
     grid-column: 1 / span all;
     justify-self: center;
 
-    opacity: 60%;
+    text-align: left;
 
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 5%;
+    margin-bottom: 6%;
 }
+
+.top_menu a {
+    color: #f5f5f590;
+    text-decoration: none;
+
+    transition: color 0.4s;
+}
+
+.top_menu a:hover {
+    color: #f5f5f5;
+}
+
 /*--------------------------- header end ---------------------------*/
 
 /*--------------------------- CARDS ---------------------------*/
@@ -74,78 +110,23 @@ body {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
-    justify-self: center;
-    /*position: relative;*/
-    /*z-index: -1;*/
+
+    border-radius: 2%;
+    z-index: -1;
 }
 
 .swiper {
-    width: 40rem;
-    height: 56rem;
-    margin-top: 10em;
-    margin-bottom: 5em;
+    width: 70%;
+    aspect-ratio: 1/1.42;
+    margin-top: 10%;
 
     grid-column: 1 / span all;
     justify-self: center;
-
-    position: relative;
 }
 
-
-.swiper-slide {
-    position: relative;
-}
-
-
-.card_headline p {
-    font-size: 39.5pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-    /*margin-top: 0;*/
-    /*margin-bottom: 0;*/
-}
-
-.card_headline_bottom p {
-    font-size: 39.5pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-    /*margin-top: 0;*/
-    /*margin-bottom: 0;*/
-}
-.card_headline_bottom h1 {
-    font-size: 39.5pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-}
-
-.clip_top {
-    clip-path: inset(50% 0 0 0);
-}
-.clip_bottom {
-    clip-path: inset(0 0 52% 0);
-}
-
-
-.card_subheadline p{
-    font-size: 24pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    text-align: center;
-    white-space: normal;
-}
 
 .card_headline{
     position: absolute;
-
-    /*margin-top: 0;*/
-    /*margin-bottom: 0;*/
 
     top: 0;
     left: 50%;
@@ -154,27 +135,199 @@ body {
     z-index: 2;
 }
 
-.card_headline_bottom {
-    position: absolute;
-
-    /*margin-top: 0;*/
-    /*margin-bottom: 0;*/
-
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-    z-index: 5;
+.clip_top {
+    clip-path: inset(50% 0 0 0);
+}
+.clip_bottom {
+    clip-path: inset(0 0 60% 0);
 }
 
 
 .card_subheadline {
-    margin-top: 1.618em;
     text-align: center;
 }
 
-.black_font p {
+.black_font {
     color: #1b1c1d;
+}
+/*--------------------------- end ---------------------------*/
+
+/*--------------------------- ABOUT ---------------------------*/
+
+.portrait {
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 4;
+
+    margin-top: 25%;
+    margin-left: 10%;
+    align-self: end;
+}
+
+.me_img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10%;
+    vertical-align: bottom;
+}
+.about {
+    grid-column: 2 / span 3;
+    grid-row: 4;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.about h2 {
+    mix-blend-mode: exclusion;
+    margin-bottom: 0;
+}
+
+.about p {
+    letter-spacing: 0.1em;
+    margin-right: -0.1em;
+    opacity: 60%;
+
+    mix-blend-mode: exclusion;
+    margin-left: 22%;
 }
 
 
+/*--------------------------- end ---------------------------*/
+
+/*--------------------------- CONTACTS ---------------------------*/
+.contacts {
+    margin-top: 20%;
+
+    grid-column: 2 / span 2;
+    justify-self: center;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 10pt;
+    font-weight: 200;
+    letter-spacing: 1.4em;
+    margin-right: -1.4em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 0.618em;
+}
+
+.mail {
+    letter-spacing: 0.1em;
+    color: #f5f5f590;
+    text-decoration: none;
+
+    transition: color 0.4s;
+}
+
+.mail:hover {
+    color: #f5f5f5;
+}
+
+.socials {
+    margin-top: 4%;
+    margin-bottom: 0%;
+}
+
+.social_icon {
+    letter-spacing: 0;
+    color: #f5f5f590;
+    transition: color 0.4s;
+    text-decoration: none;
+    margin: 0 0.1em;
+    justify-self: center;
+}
+
+.social_icon:hover {
+    color: #f5f5f5;
+}
+
+/*--------------------------- end ---------------------------*/
+
+/*--------------------------- FOOTER ---------------------------*/
+footer {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+footer h2 {
+    font-size: 5pt;
+    font-weight: 200;
+    color: #f5f5f560;
+}
+/*--------------------------- end ---------------------------*/
+
+@media (min-width: 450px) {
+
+    .container {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .f_base24 {
+        font-size: 40pt;
+    }
+    .f_base14 {
+        font-size: 24pt;
+    }
+    .f_base8 {
+        font-size: 16pt;
+    }
+
+    .top_menu {
+        font-size: 20pt;
+        word-spacing: 3em;
+    }
+
+    .big_headline {
+        font-size: 56pt;
+        grid-column: 3 / span 8;
+    }
+
+    .name_headline {
+        font-size: 20pt;
+        grid-column: 4 / span 6;
+    }
+
+    footer h2{
+        font-size: 10pt;
+    }
+
+    .about {
+        margin-top: 40%;
+        grid-column: 6 / span 6;
+        grid-row: 3;
+    }
+    .portrait {
+        grid-column: 2 / span 6;
+        grid-row: 3;
+    }
+
+    .contacts {
+        grid-column: 4 / span 6;
+    }
+
+    .contacts h2 {
+        font-size: 20pt;
+        letter-spacing: 2em;
+    }
+
+    .swiper {
+        width: 100%;
+        aspect-ratio: 1/1.3;
+
+        margin-top: 50%;
+
+        grid-column: 2 / span 4;
+    }
+
+    .card_headline h2{
+        font-size: 24pt;
+    }
+
+    .column_new_start {
+        grid-column: 8 / span 4;
+    }
+
+}
