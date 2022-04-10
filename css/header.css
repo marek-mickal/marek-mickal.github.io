@@ -1,0 +1,79 @@
+/*--------------------------- HEADER ---------------------------*/
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: whitesmoke;
+}
+
+header {
+    margin-top: 16px;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.big_headline {
+    grid-column: 1 / span all;
+    justify-self: center;
+
+}
+
+.name_headline {
+    font-size: 9pt;
+
+    grid-row: 3;
+
+    justify-self: center;
+
+    margin-bottom: 0;
+
+    opacity: 90%;
+}
+
+.top_menu {
+    font-size: 9pt;
+
+    letter-spacing: 0.3em;
+    margin-right: -0.3em;
+    word-spacing: 1em;
+
+    justify-self: center;
+
+    text-align: left;
+
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.top_menu a {
+    color: #f5f5f590;
+    text-decoration: none;
+
+    transition: color 0.4s;
+}
+
+.top_menu a:hover {
+    color: #f5f5f5;
+}
+
+/*--------------------------- header end ---------------------------*/
+
+
+@media (min-width: 1024px) {
+    header {
+        margin-bottom: 0;
+    }
+
+    .top_menu {
+        font-size: 20pt;
+    }
+
+    .big_headline {
+        font-size: 68pt;
+    }
+
+    .name_headline {
+        font-size: 20pt;
+        margin-top: 2em;
+    }
+}

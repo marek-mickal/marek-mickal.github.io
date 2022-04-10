@@ -38,8 +38,8 @@ main, header {
 }
 header {
     margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;*/
     justify-content: center;
     margin-bottom: 5%;
 }
@@ -72,8 +72,8 @@ header {
 .name_headline {
     font-size: 9pt;
 
-    /*grid-column: 2 / span 4;*/
-    grid-column: 2 /span 2;
+    grid-row: 3;
+
     justify-self: center;
 
     margin-bottom: 0;
@@ -88,7 +88,6 @@ header {
     margin-right: -0.3em;
     word-spacing: 1em;
 
-    grid-column: 1 / span all;
     justify-self: center;
 
     text-align: left;
@@ -275,14 +274,11 @@ footer h2 {
 }
 /*--------------------------- end ---------------------------*/
 
-@media (min-width: 450px) {
 
-    .container {
-        grid-template-columns: repeat(12, 1fr);
-    }
+@media (min-width: 768px) and (max-width: 1023px){
 
     .f_base24 {
-        font-size: 40pt;
+        font-size: 32pt;
     }
     .f_base14 {
         font-size: 24pt;
@@ -291,25 +287,64 @@ footer h2 {
         font-size: 16pt;
     }
 
+    header {
+        margin-bottom: 0;
+    }
+    .top_menu {
+        word-spacing: 4em;
+    }
+
+    .big_headline {
+        font-size: 48pt;
+    }
+
+    .contacts {
+        margin-top: 10%;
+    }
+
+    .about {
+        margin-top: 10%;
+    }
+    .portrait {
+        margin-top: 10%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .container {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .f_base24 {
+        font-size: 32pt;
+    }
+    .f_base14 {
+        font-size: 24pt;
+    }
+    .f_base8 {
+        font-size: 16pt;
+    }
+
+
+    header {
+        margin-bottom: 0;
+    }
     .top_menu {
         font-size: 20pt;
-        word-spacing: 3em;
+        word-spacing: 8em;
     }
 
     .big_headline {
         font-size: 68pt;
-
-        /*grid-column: 3 / span 8;*/
     }
 
     .name_headline {
         font-size: 20pt;
-        /*grid-column: 4 / span 6;*/
+        margin-top: 2em;
     }
 
-    footer h2{
-        font-size: 10pt;
-    }
 
     .about {
         margin-top: 40%;
@@ -330,26 +365,39 @@ footer h2 {
         letter-spacing: 2em;
     }
 
-    .swiper {
-        width: 100%;
-        aspect-ratio: 1/1.3;
-
-        margin-top: 50%;
-
-        grid-column: 2 / span 4;
+    footer h2{
+        font-size: 10pt;
     }
 
-    .card_headline h2{
-        font-size: 24pt;
+    .swiper {
+        aspect-ratio: 1/1.3;
+        grid-column: 2 / span 4;
     }
 
     .column_new_start {
         grid-column: 8 / span 4;
     }
+
+    .watercolor {
+        font-size: 30pt;
+        letter-spacing: 0.4em;
+        margin-right: -0.4em;
+    }
+
+    .card_subheadline h2{
+        font-size: 20pt;
+    }
 }
 
-@media (max-width: 400px) {
-    .card_headline h2{
-        font-size: 10pt;
+@media (max-width: 380px) {
+    .clip_top {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+    .clip_bottom {
+        clip-path: inset(0 0 0 0);
+    }
+
+    .card_headline {
+        mix-blend-mode: exclusion;
     }
 }

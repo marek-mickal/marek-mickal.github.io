@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Digital art by MM</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital by MM</title>
+    <link rel="stylesheet" href="css/digital.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <body>
-<h1 COMMING SOON></h1>
+<header>
+    <div class="top_menu f_base8">
+        <a href="#pp">Pet portraits</a>
+    </div>
+    <h2 class="big_headline f_base24">Art by MM</h2>
+    <h2 class="name_headline f_base8">Marek Mičkal</h2>
+</header>
+
+<main>
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/digital/benik_sq.jpg" alt="Pet portrait">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/bobi_sq.jpg" alt="Pet portrait">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/garp_sq.jpg" alt="Pet portrait">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/teo_sq.jpg" alt="Pet portrait">
+                </div>
+            </div>
+        </div>
+        <div id="pp" class="card_headline">
+            <h2 class="f_base12">Pet portraits</h2>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <h2>&copy; Marek Mičkal 2022</h2>
+</footer>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 2,
+        // loopedSlides: 2,
+        speed: 1000,
+        loop: true,
+        effect: "coverflow",
+        centeredSlides: true,
+        grabCursor: true,
+        coverflowEffect: {
+            rotate: 10,
+            stretch: 0,
+            depth: 200,
+            modifier: -2,
+            slideShadows: true,
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        }
+    });
+</script>
 </body>
 </html>
