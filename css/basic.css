@@ -347,7 +347,7 @@ footer h2 {
 }
 
 @media (max-width: 400px) {
-    .clip_top {
-        clip-path: inset(0 0 0 0);
+    .in_front {
+        z-index: 3;
     }
 }
