@@ -118,6 +118,7 @@ header {
     max-height: 100%;
 
     border-radius: 2%;
+    position: relative;
     z-index: -1;
 }
 
@@ -343,5 +344,10 @@ footer h2 {
     .column_new_start {
         grid-column: 8 / span 4;
     }
+}
 
+@media (max-width: 400px) {
+    .clip_top {
+        clip-path: inset(0 0 0 0);
+    }
 }
