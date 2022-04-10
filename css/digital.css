@@ -40,16 +40,21 @@ header {
     margin-top: 16px;
     display: grid;
     justify-content: center;
+    grid-template-columns: 1fr;
     margin-bottom: 5%;
 }
 
 .big_headline {
+    /*font-size: 10em;*/
+    font-size: clamp(0.5em, 3vw + 1.5em, 10em);
     grid-column: 1 / span all;
     justify-self: center;
 }
 
 .name_headline {
-    font-size: 9pt;
+    /*font-size: 9pt;*/
+    /*font-size: 1em;*/
+    font-size: clamp(0.5em, 0.5vw + 1.1em, 10em);
 
     grid-row: 3;
 

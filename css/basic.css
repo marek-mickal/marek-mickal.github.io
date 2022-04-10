@@ -1,3 +1,7 @@
+root {
+    --fs_basic: clamp(20pt, 12vw + 1rem, 68pt);
+}
+
 /*--------------------------- FONTS ---------------------------*/
 .f_base24 {
     font-size: 24pt;
@@ -275,7 +279,7 @@ footer h2 {
 /*--------------------------- end ---------------------------*/
 
 
-@media (min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
     .f_base24 {
         font-size: 32pt;
@@ -311,7 +315,7 @@ footer h2 {
 
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
     .container {
         grid-template-columns: repeat(12, 1fr);
@@ -378,26 +382,31 @@ footer h2 {
         grid-column: 8 / span 4;
     }
 
-    .watercolor {
-        font-size: 30pt;
-        letter-spacing: 0.4em;
-        margin-right: -0.4em;
-    }
 
     .card_subheadline h2{
-        font-size: 20pt;
+        /*font-size: 20pt;*/
+        font-size: clamp(20pt, 1vw + 1.2em, 42pt);
+    }
+
+    .card_headline h2 {
+        font-size: clamp(20pt, 2vw + 1.5em, 48pt);
+    }
+
+    .watercolor {
+        letter-spacing: 0.3em;
+        margin-right: -0.3em;
     }
 }
 
-@media (max-width: 380px) {
-    .clip_top {
-        clip-path: inset(100% 100% 100% 100%);
-    }
-    .clip_bottom {
-        clip-path: inset(0 0 0 0);
-    }
+/*@media (max-width: 380px) {*/
+/*    .clip_top {*/
+/*        clip-path: inset(100% 100% 100% 100%);*/
+/*    }*/
+/*    .clip_bottom {*/
+/*        clip-path: inset(0 0 0 0);*/
+/*    }*/
 
-    .card_headline {
-        mix-blend-mode: exclusion;
-    }
-}
+/*    .card_headline {*/
+/*        mix-blend-mode: exclusion;*/
+/*    }*/
+/*}*/
