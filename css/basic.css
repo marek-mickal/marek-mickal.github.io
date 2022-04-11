@@ -112,7 +112,7 @@ header {
 .card_headline h2 {
     letter-spacing: 0.4em;
     margin-right: -0.4em;
-    /*-webkit-transform: translateZ(-1px);*/
+    -webkit-transform: translateZ(-1px);
 
 }
 
