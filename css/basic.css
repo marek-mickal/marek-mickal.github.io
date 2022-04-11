@@ -112,7 +112,7 @@ header {
 .card_headline h2 {
     letter-spacing: 0.4em;
     margin-right: -0.4em;
-    /*-webkit-transform: translateZ(-10px);*/
+    -webkit-transform: translateZ(-10px);
 
 }
 
@@ -120,7 +120,7 @@ header {
     max-width: 98%;
     position: absolute;
     /*transform: translateZ(-1vh);*/
-    -webkit-transform: translateZ(-20px);
+    -webkit-transform: translateZ(-10px);
 
     top: 0;
     left: 50%;
