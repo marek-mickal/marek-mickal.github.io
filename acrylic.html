@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Acrylic by MM</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital by MM</title>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/pages.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <body>
-<h1 COMMING SOON></h1>
+<header>
+    <div class="top_menu">
+        <a>COMING SOON</a>
+    </div>
+    <h2 class="big_headline">Art by MM</h2>
+    <h2 class="name_headline">Acrylic</h2>
+</header>
+
+<footer>
+    <h2>&copy; Marek Mičkal 2022</h2>
+</footer>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 2,
+        speed: 1200,
+        loop: true,
+        centeredSlides: true,
+        centeredSlides: true,
+        grabCursor: true,
+        effect: "coverflow",
+        coverflowEffect: {
+            rotate: -10,
+            stretch: 0,
+            depth: 400,
+            modifier: 1,
+            slideShadows: false,
+            scale: 0.618,
+        },
+    });
+</script>
 </body>
 </html>
