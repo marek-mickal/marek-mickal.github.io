@@ -142,7 +142,7 @@ header {
 .card_headline{
     max-width: 98%;
     position: absolute;
-    transform: translateZ(1px);
+    transform: translateZ(-1px);
 
     top: 0;
     left: 50%;
