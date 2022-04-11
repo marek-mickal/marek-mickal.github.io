@@ -14,9 +14,9 @@
 <body>
 <header>
     <div class="top_menu">
-        <a href="#pp">Pet-portraits</a>
+        <a href="#petP">Pet portraits</a>
         <a href="#poster">Posters</a>
-        <a href="#pp">Stickers</a>
+        <a href="#stickies">Stickers</a>
     </div>
     <h2 class="big_headline">Art by MM</h2>
     <h2 class="name_headline">Digital art</h2>
@@ -24,7 +24,8 @@
 
 <main>
     <div class="container">
-        <div class="swiper2">
+
+        <div id="petP" class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="images/digital/benik_sq.jpg" alt="Pet portrait">
@@ -40,12 +41,12 @@
                 </div>
             </div>
         </div>
-        <div id="pp" class="card_tag">
+        <div class="card_tag">
             <h2 class="name_headline fix_position">Pet portraits</h2>
         </div>
 
 
-        <div class="swiper2">
+        <div  id="poster" class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="images/digital/posters/leo.JPG" alt="Digital poster">
@@ -58,11 +59,88 @@
                 </div>
             </div>
         </div>
-        <div id="poster" class="card_tag">
+        <div class="card_tag">
             <h2 class="name_headline fix_position">Posters</h2>
         </div>
-    </div>
 
+        <div  id="stickies" class="swiper slide_shrink">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/cowcats/A6_sheet_1.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/cowcats/A6_sheet_2.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/cowcats/A6_sheet_3.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/cowcats/A6_sheet_4.jpg" alt="Sticker sheet">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/houbisky.jpg" alt="Sticker sheet">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_apple_time.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_kastany.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_na_poli.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_plody.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_rainy_day.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_sklizen.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/podzim/A6_yummi.jpg" alt="Sticker sheet">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_1.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_2.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_3.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_4.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_5.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/halloween/A6_sheet_6.jpg" alt="Sticker sheet">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/lesni_z/A6_sheet_hrabos_p.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/lesni_z/A6_sheet_kanec_p.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/lesni_z/A6_sheet_veverka_p.jpg" alt="Sticker sheet">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/digital/stickers/lesni_z/A6_sheet_meda_p.jpg" alt="Sticker sheet">
+                </div>
+            </div>
+        </div>
+        <div class="card_tag">
+            <h2 class="name_headline fix_position">Stickers made with Bajovec</h2>
+        </div>
+    </div>
 </main>
 
 
@@ -75,26 +153,27 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper('.swiper2', {
+    var swiper = new Swiper('.swiper', {
         // Optional parameters
         slidesPerView: 2,
-        // loopedSlides: 2,
-        speed: 1000,
+        speed: 1200,
         loop: true,
-        effect: "coverflow",
+        centeredSlides: true,
         centeredSlides: true,
         grabCursor: true,
+        effect: "coverflow",
         coverflowEffect: {
-            rotate: 10,
+            rotate: -10,
             stretch: 0,
-            depth: 200,
-            modifier: -2,
-            slideShadows: true,
+            depth: 400,
+            modifier: 1,
+            slideShadows: false,
+            scale: 0.618,
         },
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        }
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: true,
+        // }
     });
 </script>
 </body>

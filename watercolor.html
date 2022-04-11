@@ -2,9 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Watercolor by MM</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital by MM</title>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/pages.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <body>
-<h1 COMMING SOON></h1>
+<header>
+    <div class="top_menu">
+        <a href="#o">Originals</a>
+        <a href="#p">Prints</a>
+    </div>
+    <h2 class="big_headline">Art by MM</h2>
+    <h2 class="name_headline">Watercolors</h2>
+</header>
+
+<main>
+    <div class="container">
+
+        <div id="o" class="swiper slide_shrink">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/watercolor/origos/theCut.JPG" alt="Watercolor painting">
+                </div>
+                <div class="swiper-slide" style="background-color: #1b1c1d">
+                    <h2 class="name_headline fix_position">More coming soon</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card_tag">
+            <h2 class="name_headline fix_position">Watercolor paintings</h2>
+        </div>
+
+
+        <div  id="p" class="swiper slide_shrink">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/rose.JPG" alt="Watercolor print">
+                </div>
+                <div class="swiper-slide" style="background-color: #1b1c1d; border-radius: 5%">
+                    <h2 class="name_headline fix_position">More coming soon</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card_tag">
+            <h2 class="name_headline fix_position">Watercolor prints</h2>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <h2>&copy; Marek Mičkal 2022</h2>
+</footer>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper', {
+        // Optional parameters
+        slidesPerView: 2,
+        speed: 1200,
+        loop: true,
+        centeredSlides: true,
+        centeredSlides: true,
+        grabCursor: true,
+        effect: "coverflow",
+        coverflowEffect: {
+            rotate: -10,
+            stretch: 0,
+            depth: 400,
+            modifier: 1,
+            slideShadows: false,
+            scale: 0.618,
+        },
+        // autoplay: {
+        //     delay: 2000,
+        //     disableOnInteraction: true,
+        // }
+    });
+</script>
 </body>
 </html>

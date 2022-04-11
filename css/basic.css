@@ -1,41 +1,23 @@
-root {
-    --fs_basic: clamp(20pt, 12vw + 1rem, 68pt);
-}
-
-/*--------------------------- FONTS ---------------------------*/
-.f_base24 {
-    font-size: 24pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.f_base14 {
-    font-size: 14pt;
-    font-weight: 200;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-}
-
-.f_base8 {
-    font-size: 8pt;
-    font-weight: 300;
-    letter-spacing: 0.618em;
-    margin-right: -0.618em;
-}
-
-/*--------------------------- end ---------------------------*/
-
 body {
     background-image: linear-gradient(to top, #1b1c1d, #1c1d1e, #1c1d1f, #1d1e20, #1e1e21, #1f1f22, #202023, #212124, #222226, #232427, #252529, #26272a);
     margin: 0;
-    min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
     color: whitesmoke;
 }
+
+body h2, a, p {
+    font-weight: 200;
+
+
+    margin-bottom: 0;
+}
+
+body h2 {
+    margin-top: 0;
+    letter-spacing: 0.618em;
+    margin-right: -0.618em;
+}
+
 
 main, header {
     margin: 0 16px;
@@ -43,7 +25,6 @@ main, header {
 header {
     margin-top: 16px;
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
     justify-content: center;
     margin-bottom: 5%;
 }
@@ -74,26 +55,22 @@ header {
 }
 
 .name_headline {
-    font-size: 9pt;
-
     grid-row: 3;
 
     justify-self: center;
 
+    margin-top: 3%;
     margin-bottom: 0;
 
     opacity: 90%;
 }
 
 .top_menu {
-    font-size: 9pt;
-
     letter-spacing: 0.3em;
     margin-right: -0.3em;
     word-spacing: 1em;
 
     justify-self: center;
-
     text-align: left;
 
     margin-top: 5%;
@@ -105,10 +82,6 @@ header {
     text-decoration: none;
 
     transition: color 0.4s;
-}
-
-.top_menu a:hover {
-    color: #f5f5f5;
 }
 
 /*--------------------------- header end ---------------------------*/
@@ -142,7 +115,7 @@ header {
 .card_headline{
     max-width: 98%;
     position: absolute;
-    transform: translateZ(-1px);
+    transform: translateZ(-1vh);
 
     top: 0;
     left: 50%;
@@ -167,6 +140,7 @@ header {
 
 .card_subheadline {
     text-align: center;
+    margin-top: 1em;
 }
 
 .black_font {
@@ -227,7 +201,7 @@ header {
 
 .contacts h2 {
     font-size: 10pt;
-    font-weight: 200;
+    /*font-weight: 200;*/
     letter-spacing: 1.4em;
     margin-right: -1.4em;
 
@@ -244,9 +218,6 @@ header {
     transition: color 0.4s;
 }
 
-.mail:hover {
-    color: #f5f5f5;
-}
 
 .socials {
     margin-top: 4%;
@@ -262,10 +233,6 @@ header {
     justify-self: center;
 }
 
-.social_icon:hover {
-    color: #f5f5f5;
-}
-
 /*--------------------------- end ---------------------------*/
 
 /*--------------------------- FOOTER ---------------------------*/
@@ -276,7 +243,7 @@ footer {
 
 footer h2 {
     font-size: 8pt;
-    font-weight: 200;
+    /*font-weight: 200;*/
     color: #f5f5f560;
 }
 /*--------------------------- end ---------------------------*/
@@ -284,7 +251,7 @@ footer h2 {
 
 /*_____FONT EDIT____________________________________________________*/
 .top_menu {
-    font-size: clamp(12px, 12px + 100 * (100vw - 375px) / 1143, 24px);
+    font-size: clamp(12px, 12px + 50 * (100vw - 375px) / 1143, 22px);
 }
 
 .big_headline {
@@ -443,7 +410,7 @@ footer h2 {
     }
 
     footer h2{
-        font-size: clamp(18px, 18px + 150 * (100vw - 1200px) / 3300, 32px);
+        font-size: clamp(12px, 12px + 50 * (100vw - 1200px) / 3300, 16px);
     }
 
 }
@@ -479,5 +446,12 @@ footer h2 {
 
     .column_new_start {
         grid-column: 8 / span 4;
+    }
+}
+
+@media (hover: hover) {
+
+    .top_menu a:hover, .mail:hover, .social_icon:hover{
+        color: #f5f5f5;
     }
 }
