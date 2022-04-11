@@ -94,6 +94,8 @@ header {
     max-height: 99%;
 
     border-radius: 2%;
+    position: absolute;
+    z-index: -1;
 }
 
 .swiper {
@@ -118,13 +120,13 @@ header {
     max-width: 98%;
     position: absolute;
     /*transform: translateZ(-1vh);*/
-    -webkit-transform: translateZ(-1px);
+    /*-webkit-transform: translateZ(-10px);*/
 
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
 
-    z-index: 2;
+    z-index: 1;
 }
 
 .swiper-slide {
