@@ -11,7 +11,7 @@ h2 {
 
 .container {
     display: grid;
-    grid-template-columns: 0.2fr 2fr 2fr 0.2fr;
+    grid-template-columns: 0.05fr 4fr 4fr 0.05fr;
     max-height: 100%;
     width: 100%;
 }
@@ -31,6 +31,7 @@ h2 {
 }
 
 .container img {
+    position: unset;
     display: block;
     width: 90%;
     max-height: 100%;
@@ -71,3 +72,13 @@ h2 {
 .top_menu a {
     word-spacing: normal;
 }
+
+/*@media screen and (orientation: landscape){*/
+/*    .swiper{*/
+/*        width: 70%;*/
+/*    }*/
+/*    .slide_shrink{*/
+/*        width: 50%;*/
+/*    }*/
+
+/*}*/

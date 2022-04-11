@@ -88,7 +88,7 @@ header {
 
 /*--------------------------- CARDS ---------------------------*/
 
-.container img {
+.swiper img {
     object-fit: cover;
     width: 100%;
     max-height: 99%;
@@ -112,7 +112,7 @@ header {
 .card_headline h2 {
     letter-spacing: 0.4em;
     margin-right: -0.4em;
-    -webkit-transform: translateZ(-1px);
+    /*-webkit-transform: translateZ(-1px);*/
 
 }
 
@@ -145,7 +145,14 @@ header {
 
 .card_subheadline {
     text-align: center;
-    margin-top: 1em;
+    max-width: 98%;
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,110%);
+
+    z-index: 1;
 }
 
 .black_font {
