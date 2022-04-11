@@ -67,7 +67,16 @@
 <script>
     var swiper = new Swiper('.swiper', {
         // Optional parameters
-        slidesPerView: 2,
+        slidesPerView: 1,
+        breakpoints: {
+            // when window width is >= 400px
+            700: {
+                slidesPerView: 1.4
+            },
+            1000: {
+                slidesPerView: 2
+            }
+        },
         speed: 1200,
         loop: true,
         centeredSlides: true,
@@ -82,10 +91,6 @@
             slideShadows: false,
             scale: 0.618,
         },
-        // autoplay: {
-        //     delay: 2000,
-        //     disableOnInteraction: true,
-        // }
     });
 </script>
 </body>
